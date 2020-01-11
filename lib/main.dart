@@ -8,6 +8,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Home(),
       theme: ThemeData(
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.7),
+        splashColor: Colors.white70,
         primarySwatch: Colors.yellow
       ),
     );
