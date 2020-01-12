@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './demo/draw_demo.dart';
-// import './demo/listviewitem.dart';
+import './demo/bottom_navigation_bar_widget.dart';
+import './demo/listviewitem.dart';
 void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
   }
 }
 class Home extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -45,34 +47,14 @@ class Home extends StatelessWidget {
             ],
           ),
         ),
-        body: TabBarView(children: <Widget>[
-          Icon(Icons.local_florist, size: 128.0, color: Colors.black26),
+        body: TabBarView(
+          children: <Widget>[
+          ListViewItem(),
           Icon(Icons.change_history, size: 128.0, color: Colors.black26),
           Icon(Icons.directions_bike, size: 128.0, color: Colors.black26),
         ]),
         drawer: DrawDemo(),
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          fixedColor: Colors.black,
-          items: [
-            BottomNavigationBarItem(
-              title: Text('Explore'),
-              icon: Icon(Icons.explore)
-            ),
-            BottomNavigationBarItem(
-              title: Text('History'),
-              icon: Icon(Icons.history)
-            ),
-            BottomNavigationBarItem(
-              title: Text('List'),
-              icon: Icon(Icons.list)
-            ),
-            BottomNavigationBarItem(
-              title: Text('My'),
-              icon: Icon(Icons.person)
-            )
-          ],
-        ),
+        bottomNavigationBar: BottomNavigationBarWidget()
       ),
     );
   }
