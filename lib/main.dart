@@ -50,7 +50,29 @@ class Home extends StatelessWidget {
           Icon(Icons.change_history, size: 128.0, color: Colors.black26),
           Icon(Icons.directions_bike, size: 128.0, color: Colors.black26),
         ]),
-        drawer: DrawDemo()
+        drawer: DrawDemo(),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          fixedColor: Colors.black,
+          items: [
+            BottomNavigationBarItem(
+              title: Text('Explore'),
+              icon: Icon(Icons.explore)
+            ),
+            BottomNavigationBarItem(
+              title: Text('History'),
+              icon: Icon(Icons.history)
+            ),
+            BottomNavigationBarItem(
+              title: Text('List'),
+              icon: Icon(Icons.list)
+            ),
+            BottomNavigationBarItem(
+              title: Text('My'),
+              icon: Icon(Icons.person)
+            )
+          ],
+        ),
       ),
     );
   }
