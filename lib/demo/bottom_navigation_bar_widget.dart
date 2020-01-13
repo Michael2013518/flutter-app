@@ -23,19 +23,19 @@ class _BottomNavigationBarState extends State<BottomNavigationBarWidget> {
           fixedColor: Colors.black,
           items: [
             BottomNavigationBarItem(
-              title: Text('Explore'),
+              title: Text('浏览'),
               icon: Icon(Icons.explore)
             ),
             BottomNavigationBarItem(
-              title: Text('History'),
+              title: Text('历史'),
               icon: Icon(Icons.history)
             ),
             BottomNavigationBarItem(
-              title: Text('List'),
+              title: Text('列表'),
               icon: Icon(Icons.list)
             ),
             BottomNavigationBarItem(
-              title: Text('My'),
+              title: Text('我的'),
               icon: Icon(Icons.person)
             )
           ],
