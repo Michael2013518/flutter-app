@@ -4,6 +4,7 @@ import './demo/bottom_navigation_bar_widget.dart';
 import './demo/listviewitem.dart';
 //import './demo//basic_widget.dart';
 import './demo/basic1_widget.dart';
+import './demo//layout_widget.dart';
 void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
@@ -53,7 +54,8 @@ class Home extends StatelessWidget {
           children: <Widget>[
           ListViewItem(),
           Basic1Widget(),
-          Icon(Icons.directions_bike, size: 128.0, color: Colors.black26),
+          // Icon(Icons.directions_bike, size: 128.0, color: Colors.black26),
+          LayoutDemo()
         ]),
         drawer: DrawDemo(),
         bottomNavigationBar: BottomNavigationBarWidget()
