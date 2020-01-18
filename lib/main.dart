@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './demo/draw_demo.dart';
 import './demo/bottom_navigation_bar_widget.dart';
 import './demo/listviewitem.dart';
+import './demo//basic_widget.dart';
 void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
@@ -50,7 +51,7 @@ class Home extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
           ListViewItem(),
-          Icon(Icons.change_history, size: 128.0, color: Colors.black26),
+          BasicWidget(),
           Icon(Icons.directions_bike, size: 128.0, color: Colors.black26),
         ]),
         drawer: DrawDemo(),
