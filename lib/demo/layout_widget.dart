@@ -7,6 +7,24 @@ class LayoutDemo extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          ConstrainedBox(
+            constraints: BoxConstraints(minHeight: 200, maxWidth: 200),
+            child: Container(
+              color: Color.fromRGBO(3, 54, 255, 1.0),
+            ),
+          )
+        ],
+        ) ,
+      );
+  }
+}
+class AspectRatioDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
           AspectRatio(
             aspectRatio: 1/1,
             child:Container(
