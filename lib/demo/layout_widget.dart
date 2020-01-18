@@ -6,6 +6,24 @@ class LayoutDemo extends StatelessWidget {
     return Container(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          AspectRatio(
+            aspectRatio: 1/1,
+            child:Container(
+              color: Color.fromRGBO(3, 54, 255, 1.0),
+            ),
+            )
+        ],
+        ) ,
+      );
+  }
+}
+class StackDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.center,
         // children: <Widget>[
         //   IconBadge(Icons.pool),
@@ -13,7 +31,9 @@ class LayoutDemo extends StatelessWidget {
         //   IconBadge(Icons.airplanemode_active)
         // ]
         children: <Widget>[
-          SizedBox(
+          Stack(
+            children: <Widget>[
+              SizedBox(
             width: 200.0,
             height: 300.0,
             child: Container(
@@ -22,7 +42,7 @@ class LayoutDemo extends StatelessWidget {
                 color: Color.fromRGBO(3, 54, 255, 1.0),
                 borderRadius: BorderRadius.circular(8.0)
               ),
-              child: Icon(Icons.ac_unit, color: Colors.white,size: 32.0),
+             
             ) ,
           ),
           SizedBox(height: 32.0),
@@ -32,17 +52,40 @@ class LayoutDemo extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 color: Color.fromRGBO(3, 54, 255, 1.0),
-                borderRadius: BorderRadius.circular(8.0)
+                //borderRadius: BorderRadius.circular(8.0)
+                shape: BoxShape.circle,
+                gradient: RadialGradient(
+                  colors: [
+                    Color.fromRGBO(7, 102, 255, 1.0),
+                    Color.fromRGBO(3, 54, 255, 1.0)
+                  ]
+                )
               ),
               child: Icon(Icons.brightness_2, color: Colors.white,size: 32.0),
             ) ,
+          ),
+          Positioned(
+            right: 20.0,
+            top: 20.0,
+            child: Icon(Icons.ac_unit, color: Colors.white,size: 20.0)
+            ),
+            Positioned(
+            right: 25.0,
+            bottom: 45.0,
+            child: Icon(Icons.ac_unit, color: Colors.white,size: 15.0)
+            ),
+            Positioned(
+            right: 50.0,
+            bottom: 20.0,
+            child: Icon(Icons.ac_unit, color: Colors.white,size: 20.0)
+            ),
+            ]
           )
         ],
         ) ,
       );
   }
 }
-
 class IconBadge extends StatelessWidget {
   final IconData icon;
   final double size;
