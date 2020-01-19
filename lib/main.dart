@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:michael_flutter/demo/sliver_demo.dart';
 import './demo/draw_demo.dart';
 import './demo/bottom_navigation_bar_widget.dart';
 import './demo/listviewitem.dart';
@@ -6,13 +7,14 @@ import './demo/listviewitem.dart';
 import './demo/basic1_widget.dart';
 import './demo/layout_widget.dart';
 import './demo/view_demo.dart';
+import './demo/sliver_demo.dart';
 void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: SliverDemo(),
       theme: ThemeData(
         highlightColor: Color.fromRGBO(255, 255, 255, 0.7),
         splashColor: Colors.white70,
