@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SliverDemo(),
+      home: Home(),
       theme: ThemeData(
         highlightColor: Color.fromRGBO(255, 255, 255, 0.7),
         splashColor: Colors.white70,
@@ -60,7 +60,8 @@ class Home extends StatelessWidget {
           Basic1Widget(),
           // Icon(Icons.directions_bike, size: 128.0, color: Colors.black26),
           LayoutDemo(),
-          ViewDemo()
+          // ViewDemo()
+          SliverDemo()
         ]),
         drawer: DrawDemo(),
         bottomNavigationBar: BottomNavigationBarWidget()
